@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-D0 App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/41360df9ef.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="row col-12 mx-auto justify-content-center alignment my-3">TO-DO WebApp</h1>
+    <main class="container alignment">
+        <div id="taskItem" class="row col-8 col-lg-5 mx-auto justify-content-center alignment my-2 p-3">
+            <!-- Input Task Item -->
+            <div class="input-group mb-3">
+                <input id="taskInput" type="text" class="form-control" placeholder="Add Your Task" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2" style="color:var(--primary);font-weight: bold;">Add</button>
+              </div>
+              
+        </div>
+        <div id="counter-div" class="col-4 mx-auto alignment">Total Tasks:<span id="counter"> 0</span></div>
+        <ul id="taskList" class="row col-10 col-lg-6 mx-auto justify-content-center alignment p-3">
+            <!-- Input Task List -->
+            <li class="input-group mb-3">
+                <div class="input-group-text">
+                  <input class="form-check-input mt-0 checkbx" type="checkbox" value="" aria-label="Checkbox for following text input">
+                </div>
+                <div class="form-control alignment2 task-field bodyCheck" data-id="1"><span>1</span>.&nbsp;<span class="task-text">Demo Task</span><img class="trash trashIcon" alt="trash" src="res/trash-can-regular.svg" data-id=1></div>
+            </li>
+            <li class="input-group mb-3">
+                <div class="input-group-text">
+                  <input class="form-check-input mt-0 checkbx" type="checkbox" value="" aria-label="Checkbox for following text input" checked>
+                </div>
+                <div class="form-control alignment2 task-field bodyCheck" data-id="2"><span>2</span>.&nbsp;<span class="task-text">Demo HomeWork</span><img class="trash trashIcon" alt="trash" src="res/trash-can-regular.svg" data-id=2></div>
+            </li>
+                            
+        </ul>
+        <!-- toast -->
+        <div id="toastBox">
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
