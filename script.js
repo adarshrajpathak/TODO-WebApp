@@ -107,14 +107,15 @@ function addTask(){
     addTaskInput.value="";  //making the input box empty
     addItem(task);  //adding task to the array
 }
-//adding the Item through Enter key
-addTaskInput.addEventListener('keypress',(e)=>{
-    if(e.key=='Enter'){
-        addTask();
-    }
-})
-//adding the Item through click on Add button
-addButton.addEventListener('click',addTask);
+//contained in the initializedEvent()
+// //adding the Item through Enter key
+// addTaskInput.addEventListener('keypress',(e)=>{
+//     if(e.key=='Enter'){
+//         addTask();
+//     }
+// })
+// //adding the Item through click on Add button
+// addButton.addEventListener('click',addTask);
 
 //for the toast
 function showToast(msg){
@@ -158,30 +159,71 @@ checkbxs.forEach((checkbox, index) => {
 });
 }
 // },10);
-lineCut();
-renderList();
-document.addEventListener('click',function(e){
-    const tar=e.target;
-    console.log(tar);
-    console.log(tar.className);
-    if(tar.classList.contains('trashIcon')){
-        const taskId=tar.dataset.id;
-        console.log(taskId);
-        deleteItem(taskId);
-        return;
-        // console.log("delete");
-    }else if(tar.classList.contains('task-text')){
-        const taskId=tar.dataset.id;
-        checkItem(taskId);
-        return;
-    // }else if(tar.className.includes('bodyCheck')){
-    }else if(tar.classList.contains('bodyCheck')){
-        const taskId=tar.dataset.id;
-        checkItem(taskId);
-        return;
-    }else if(tar.classList.contains('checkbx')){
-        const taskId=tar.dataset.id;
-        checkItem(taskId);
-        return;
-    }
-})
+//contained in the intializedEvent()
+// document.addEventListener('click',function(e){
+//     const tar=e.target;
+//     console.log(tar);
+//     console.log(tar.className);
+//     if(tar.classList.contains('trashIcon')){
+//         const taskId=tar.dataset.id;
+//         console.log(taskId);
+//         deleteItem(taskId);
+//         return;
+//         // console.log("delete");
+//     }else if(tar.classList.contains('task-text')){
+//         const taskId=tar.dataset.id;
+//         checkItem(taskId);
+//         return;
+//     // }else if(tar.className.includes('bodyCheck')){
+//     }else if(tar.classList.contains('bodyCheck')){
+//         const taskId=tar.dataset.id;
+//         checkItem(taskId);
+//         return;
+//     }else if(tar.classList.contains('checkbx')){
+//         const taskId=tar.dataset.id;
+//         checkItem(taskId);
+//         return;
+//     }
+// })
+function initializedApp(){
+    lineCut();
+    renderList();
+}
+function initializedEvent(){
+    //adding the Item through Enter key
+    addTaskInput.addEventListener('keypress',(e)=>{
+        if(e.key=='Enter'){
+            addTask();
+        }
+    })
+    // adding the Item through click on Add button
+    addButton.addEventListener('click',addTask);
+    //Event Delegation
+    document.addEventListener('click',function(e){
+        const tar=e.target;
+        console.log(tar);
+        console.log(tar.className);
+        if(tar.classList.contains('trashIcon')){
+            const taskId=tar.dataset.id;
+            console.log(taskId);
+            deleteItem(taskId);
+            return;
+            // console.log("delete");
+        }else if(tar.classList.contains('task-text')){
+            const taskId=tar.dataset.id;
+            checkItem(taskId);
+            return;
+        // }else if(tar.className.includes('bodyCheck')){
+        }else if(tar.classList.contains('bodyCheck')){
+            const taskId=tar.dataset.id;
+            checkItem(taskId);
+            return;
+        }else if(tar.classList.contains('checkbx')){
+            const taskId=tar.dataset.id;
+            checkItem(taskId);
+            return;
+        }
+    })
+}
+initializedApp();
+initializedEvent();
