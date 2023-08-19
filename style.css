@@ -133,3 +133,15 @@ h1{
         width:0%;
     }
 }
+.task-text{
+    z-index:0;
+}
+.bodyCheck{
+    z-index:2;
+}
+.bodyCheck:hover{
+    cursor:pointer;
+}
+.trashIcon{
+    z-index: 3;
+}

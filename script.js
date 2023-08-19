@@ -170,6 +170,10 @@ document.addEventListener('click',function(e){
         deleteItem(taskId);
         return;
         // console.log("delete");
+    }else if(tar.classList.contains('task-text')){
+        const taskId=tar.dataset.id;
+        checkItem(taskId);
+        return;
     // }else if(tar.className.includes('bodyCheck')){
     }else if(tar.classList.contains('bodyCheck')){
         const taskId=tar.dataset.id;
