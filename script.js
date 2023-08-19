@@ -69,7 +69,7 @@ function addTasksToDOM(task,i){
     <div class="input-group-text">
     <input id="${task.id}" class="form-check-input mt-0 checkbx" type="checkbox" value="" aria-label="Checkbox for following text input" ${task.done ? 'checked' : ''} data-id=${task.id}>
   </div>
-  <div class="form-control alignment2 task-field bodyCheck" data-id="${task.id}"><span>${i+1}</span>.&nbsp;<span class="task-text">${task.text}</span><img class="trash trashIcon" alt="trash" src="res/trash-can-regular.svg" data-id=${task.id}></div>
+  <div class="form-control alignment2 task-field bodyCheck" data-id="${task.id}"><span>${i+1}</span>.&nbsp;<span class="task-text" data-id=${task.id}>${task.text}</span><img class="trash trashIcon" alt="trash" src="res/trash-can-regular.svg" data-id=${task.id}></div>
     `;
     taskList.append(ele);
     lineCut();
@@ -159,7 +159,7 @@ checkbxs.forEach((checkbox, index) => {
 }
 // },10);
 lineCut();
-
+renderList();
 document.addEventListener('click',function(e){
     const tar=e.target;
     console.log(tar);
