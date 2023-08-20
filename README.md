@@ -1,4 +1,5 @@
-# TODO WebApp <link rel="icon" href="res/task.png" type="image/png">
+# TODO WebApp <img src="res/task.png" alt="task" width="32" height="32">
+<!-- [![task.png](res/task.png =32x32)](https://adarshrajpathak.github.io/TODO-WebApp/) #not supported by gitHub-->
 Check it out! 👉🏼 [TODO WebApp](https://adarshrajpathak.github.io/TODO-WebApp/) by [Adarsh Raj Pathak](https://github.com/adarshrajpathak)
 
 _`TODO` WebApp using Vanilla JavaScript, CSS, BootStrap, HTML_
