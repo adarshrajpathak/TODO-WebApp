@@ -124,15 +124,15 @@ function showToast(msg){
     Toast.classList.add('Toast');    //adding a class to the div element
     if(msg.includes('Error') || msg.includes("can't")){
         Toast.classList.add('red');
-        Toast.innerHTML='<i class="fa-solid fa-circle-xmark"></i> '+msg;
+        Toast.innerHTML='<i class="fa-solid fa-circle-xmark"></i>'+msg;
     }else if(msg.includes('Deleted')){
         Toast.classList.add('red');
-        Toast.innerHTML='<i class="fa-solid fa-circle-check" style="color: #e01b24;"></i> '+msg;
+        Toast.innerHTML='<i class="fa-solid fa-circle-check" style="color: #e01b24;"></i>'+msg;
     }else if(msg.includes('empty') || msg.includes('not')){
         Toast.classList.add('orange');
-        Toast.innerHTML='<i class="fa-solid fa-circle-exclamation"></i> '+msg;
+        Toast.innerHTML='<i class="fa-solid fa-circle-exclamation"></i>'+msg;
     }else{
-        Toast.innerHTML='<i class="fa-solid fa-circle-check"></i> '+msg; 
+        Toast.innerHTML='<i class="fa-solid fa-circle-check"></i>'+msg; 
     }
     toastBox.appendChild(Toast);    //appending the div element to the toastBox
     setTimeout(function(){

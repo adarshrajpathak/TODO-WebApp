@@ -1,3 +1,8 @@
+# TODO WebApp <link rel="icon" href="res/task.png">
+Check it out! 👉🏼 [TODO WebApp](https://adarshrajpathak.github.io/TODO-WebApp/) by [Adarsh Raj Pathak](https://github.com/adarshrajpathak)
+
+_`TODO` WebApp using Vanilla JavaScript, CSS, BootStrap, HTML_
+
 //Drafting about the project
 
 # Functionalities
