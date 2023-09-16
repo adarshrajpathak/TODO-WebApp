@@ -32,7 +32,7 @@ function deleteItem(taskId){
     })
     tasks=newTasks;
     renderList();
-    showNotification("Element Deleted successfully");
+    showNotification("Task Deleted successfully");
 }
 
 function checkItem(taskId){
